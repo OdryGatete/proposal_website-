@@ -8,11 +8,19 @@ body {
     display: none;
 }
 
+#ansvideo{
+    display: block;
+    visibility: visible;
+    width: 80%;
+    max-width: 420px;
+    margin: 20px auto;
+}
+
 #novideo{
     visibility: hidden;
 }
 
-.btn.disabled {
+.btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }

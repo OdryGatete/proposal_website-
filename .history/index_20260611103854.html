@@ -49,7 +49,7 @@
             </div>
             <div class = "buttons">
                 <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
-                <button class="btn disabled" id="noButton" onmouseover="moveButton()" onmousedown="moveButton()" ontouchstart="moveButton()" onclick="event.preventDefault()">No</button>
+                <button class="btn" id="noButton" disabled>No</button>
             </div>
             <video id="novideo" width="0" height="0" controls>
                 <source src="image/SadMoment.mp4" 
@@ -66,10 +66,10 @@
             <div class="gif_container qrimage">
                 <img src="image/odry_yang_qr.png" onclick="window.open('https://www.instagram.com/siddharth_gabu/')" alt="Insta Profile QR code">
             </div>
-            <audio id="ansAudio" preload="auto">
+            <video id="ansvideo" width="320" height="240" controls preload="auto">
                 <source src="image/KidsCheering.mp4" 
-                   type="audio/mp4">
-            </audio>
+                   type="video/mp4">
+            </video>
         </div>
     </body> 
     <script>
@@ -88,9 +88,9 @@
             document.getElementById('ans').style.display = 'block';
             document.getElementById('ask').style.display = 'none';
             document.getElementById('novideo').pause();
-            const answerAudio = document.getElementById('ansAudio');
-            answerAudio.currentTime = 0;
-            answerAudio.play();
+            const answerVideo = document.getElementById('ansvideo');
+            answerVideo.currentTime = 0;
+            answerVideo.play();
         }
 
     </script> 
