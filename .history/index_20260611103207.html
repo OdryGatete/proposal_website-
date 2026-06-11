@@ -93,23 +93,17 @@
             document.getElementById('ans').style.display = 'block';
             document.getElementById('ask').style.display = 'none';
             document.getElementById('novideo').pause();
-            const answerAudio = document.getElementById('ansAudio');
-            answerAudio.currentTime = 0;
-            answerAudio.play();
+            const answerVideo = document.getElementById('ansvideo');
+            answerVideo.style.display = 'none';
+            answerVideo.style.visibility = 'hidden';
+            answerVideo.play();
         }
 
-        function moveButton(event) {
-            if (event) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-
-            var button = document.getElementById('noButton');
-            var x = Math.random() * (window.innerWidth - button.offsetWidth - 20);
-            var y = Math.random() * (window.innerHeight - button.offsetHeight - 20);
-            button.style.left = `${x}px`;
-            button.style.top = `${y}px`;
-            button.style.position = 'absolute';
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+            document.getElementById('noButton').style.left = `${x}px`;
+            document.getElementById('noButton').style.top = `${y}px`;
             playAudio();
         }
 
